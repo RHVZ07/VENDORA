@@ -1,0 +1,218 @@
+/* Vendor Performance & Evaluations */
+.evaluations-overview-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Overall Rating Spotlight Card */
+.overall-score-spotlight {
+  background: linear-gradient(145deg, #1E1B4B 0%, #3B0764 100%);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.score-circle-badge {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid rgba(236, 72, 153, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+}
+
+.score-num {
+  font-size: 2.75rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.score-total {
+  font-size: 0.8125rem;
+  color: #DDD6FE;
+  font-weight: 600;
+}
+
+.rating-tier-pill {
+  display: inline-block;
+  padding: 0.35rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.rating-tier-pill.excellent { background: var(--success); color: #FFFFFF; }
+.rating-tier-pill.good { background: var(--primary); color: #FFFFFF; }
+.rating-tier-pill.average { background: var(--warning); color: #FFFFFF; }
+.rating-tier-pill.poor { background: var(--danger); color: #FFFFFF; }
+.rating-tier-pill.unrated { background: #64748B; color: #FFFFFF; }
+
+/* Criteria Grid / Bars */
+.criteria-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.criteria-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.criteria-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.criteria-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.criteria-score-text {
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: 'Outfit', sans-serif;
+  color: var(--primary);
+}
+
+.criteria-meter-bg {
+  width: 100%;
+  height: 8px;
+  background-color: var(--surface-alt);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.criteria-meter-fill {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+/* Evaluation Form Slider Card */
+.eval-slider-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  gap: 1.5rem;
+}
+
+.eval-slider-info {
+  flex: 1;
+}
+
+.eval-slider-info h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.eval-slider-info p {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.eval-slider-control {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 260px;
+}
+
+.eval-range-input {
+  flex: 1;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.eval-score-badge {
+  width: 44px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary-border);
+}
+
+/* Evaluation History Card */
+.eval-history-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  background: var(--surface);
+  transition: box-shadow var(--transition-fast);
+}
+
+.eval-history-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.eval-history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.eval-history-scores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  background: var(--surface-alt);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.eval-mini-score {
+  font-size: 0.8125rem;
+}
+
+.eval-mini-score .crit-label {
+  color: var(--text-muted);
+  display: block;
+  font-size: 0.75rem;
+}
+
+.eval-mini-score .crit-val {
+  font-weight: 700;
+  color: var(--text-primary);
+}

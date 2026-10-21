@@ -1,0 +1,110 @@
+/* Responsive Breakpoints & Mobile Styles */
+
+/* Medium Laptops & Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .chart-card-col-8 {
+    grid-column: span 12;
+  }
+  .chart-card-col-4 {
+    grid-column: span 12;
+  }
+  .evaluations-overview-grid {
+    grid-template-columns: 1fr;
+  }
+  .reports-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reports-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets & Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --navbar-height: 64px;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .main-wrapper {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .navbar-search {
+    display: none;
+  }
+
+  .page-container {
+    padding: 1.25rem 1rem;
+  }
+
+  .auth-page-wrapper {
+    flex-direction: column;
+  }
+
+  .auth-brand-side {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .auth-form-side {
+    padding: 2rem 1rem;
+  }
+
+  .form-grid-2, .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .criteria-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .invoice-parties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .po-financial-summary {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dashboard-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sidebar, .navbar, .page-actions, .btn, .icon-button {
+    display: none !important;
+  }
+  .main-wrapper {
+    margin-left: 0 !important;
+  }
+  .page-container {
+    padding: 0 !important;
+  }
+  .card, .invoice-card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

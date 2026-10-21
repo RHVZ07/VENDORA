@@ -1,0 +1,16 @@
+{
+  "name": "vendora-root",
+  "version": "1.0.0",
+  "description": "VENDORA - Vendor Management System (MERN Stack)",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && npm run seed",
+    "start": "cd server && npm start",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["mern", "vendor-management", "procurement", "react", "express", "mongodb"],
+  "author": "VENDORA Team",
+  "license": "ISC"
+}
